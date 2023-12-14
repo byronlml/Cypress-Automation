@@ -1,0 +1,12 @@
+{
+    "customer": {
+      "name": "Byron Orozco",
+      "country": "Colombia",
+      "city": "Palmira"
+    },
+    "card": {
+      "number": "6250941006528599",
+      "expiryMonth": "06",
+      "expiryYear": "2026"
+    }
+  }

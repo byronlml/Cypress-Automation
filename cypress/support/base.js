@@ -38,7 +38,6 @@ const logout = () => {
   // Verifica que el texto "Log in" aparezca en el elemento con ID "login2" para confirmar el cierre de sesión.
   cy.get('#login2').contains("Log in");
 };
-
 // Exporta las funciones "login" y "logout" para su uso en otros archivos de prueba.
 export { login };
 export { logout };

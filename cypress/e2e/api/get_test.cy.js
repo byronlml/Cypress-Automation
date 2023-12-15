@@ -11,7 +11,7 @@ describe("API pública", () => {
       const results = JSON.parse(data).results[0];
 
     // Comprueba que el género sea "male"
-      cy.expect(results.gender).oneOf("male", "female");
+      cy.expect(results.gender).contains("male", "female");
       // Verifica que la respuesta tenga éxito
       cy.expect(res.status).to.eq(200);
 

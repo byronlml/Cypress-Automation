@@ -30,7 +30,6 @@ describe("API jsonplaceholder", () => {
           }).then((res) => {
             const test = JSON.stringify(res.body);
             cy.log(test)
-            cy.wait(30000)
             // Verifica que la respuesta tenga éxito
             cy.expect(res.status).to.eq(201);
 

@@ -6,7 +6,7 @@ describe("Test Login", () => {
 
   it('Validate login - positive scenario', () => {
     cy.wait(500)
-    cy.get("#nava").contains("PRODUCT STORE");
+    cy.get("#nava").contains("PRODUCT failure");
   });
 
   after(() => {

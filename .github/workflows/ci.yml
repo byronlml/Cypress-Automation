@@ -1,4 +1,4 @@
-name: Cypress CI
+name: End-to-end testing 
 
 on:
   push:
@@ -12,9 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: cypress/run@v2
-        with:
-          browser: chrome
-          config: ./cypress.json
-
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Cypress run
+        uses: cypress-io/github-action@v5

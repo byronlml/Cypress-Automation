@@ -1,7 +1,5 @@
 # Cypress-Automation
 
-Este repositorio contiene pruebas automatizadas para una aplicación web en Cypress.
-
 Este proyecto es un ejemplo de cómo automatizar pruebas e2e web y APIs usando Cypress.
 
 ## Pre-requisitos

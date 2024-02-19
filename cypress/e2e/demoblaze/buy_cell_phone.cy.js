@@ -22,11 +22,8 @@ describe("Test Buy Cell Phone", () => {
     // Abre la categoría de celulares
     cy.get(allLocators.phoneCategoryButton).click(); // Clica el botón "Categorias -> Celulares"
 
-    // Espera 500 milisegundos para que la página cargue
-    cy.wait(500);
-
     // Selecciona el primer celular
-    cy.get(allLocators.firstPhoneLink).click(); // Clica el primer celular de la lista
+    cy.get(allLocators.firstPhoneLink).should('be.visible').click(); // Clica el primer celular de la lista
 
     // Agrega el celular al carrito
     cy.get(allLocators.addToCartButton).click(); // Clica el botón "Añadir al carrito"
@@ -34,11 +31,8 @@ describe("Test Buy Cell Phone", () => {
     // Navega al carrito de compras
     cy.get(allLocators.cartLink).click(); // Clica el enlace "Carrito"
 
-    // Espera 500 milisegundos para que la página cargue
-    cy.wait(500);
-
     // Procede al proceso de compra
-    cy.get(allLocators.checkoutButton).click(); // Clica el botón "Checkout"
+    cy.get(allLocators.checkoutButton).should('be.visible').click(); // Clica el botón "Checkout"
 
     // Lee los datos de compra del archivo "cypress/fixtures/buy_cell_phone.json"
     cy.readFile('cypress/fixtures/buy_cell_phone.json').then(data => {

@@ -16,23 +16,17 @@ describe("Test buy a laptop", () => {
     // Abre la categoría de celulares
     cy.get(allLocators.laptopCategoryButton).click(); // Clica el botón "Categorias -> portatil"
 
-    // Espera 500 milisegundos para que la página cargue
-    cy.wait(500);
-
     // Selecciona el segundo portatil
-    cy.get(allLocators.firstLaptopLink).click(); // Clica el segundo portatil de la lista
+    cy.get(allLocators.firstLaptopLink).should('be.visible').click(); // Clica el segundo portatil de la lista
 
     // Agrega el celular al carrito
-    cy.get(allLocators.addToCartButton).click(); // Clica el botón "Añadir al carrito"
+    cy.get(allLocators.addToCartButton).should('be.visible').click(); // Clica el botón "Añadir al carrito"
 
     // Navega al carrito de compras
     cy.get(allLocators.cartLink).click(); // Clica el enlace "Carrito"
 
-    // Espera 500 milisegundos para que la página cargue
-    cy.wait(500);
-
     // Procede al proceso de compra
-    cy.get(allLocators.checkoutButton).click(); // Clica el botón "Checkout"
+    cy.get(allLocators.checkoutButton).should('be.visible').click(); // Clica el botón "Checkout"
 
     // Lee los datos de compra del archivo "cypress/fixtures/buy_laptop.json"
     cy.readFile('cypress/fixtures/buy_laptop.json').then(data => {
